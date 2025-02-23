@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nearest Police Station</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <header>
+        <nav class="navbar">
+          <div class="nav-container">
+            <a href="index.html" class="nav-logo" style="color: #551A8B;">Tensor Titans</a>
+            <div class="mobile-icon" onclick="toggleMobileMenu()">
+              <i class="fa fa-bars"></i>
+            </div>
+            <ul class="nav-items">
+              <li><a href="#about" class="nav-item">About</a></li>
+              <li><a href="#projects" class="nav-item">Models</a></li>  
+              <li><a href="https://example.com" target="_blank" class="nav-item">Report Incident</a></li>
+              <li><a href="https://example.com" target="_blank" class="nav-item">Track Location</a></li>
+              <li><a href="https://chatgpt.com" target="_blank" class="nav-item">ChatBot</a></li>
+            </ul>
+            <div class="button-container">
+              <a href="https://drive.google.com/file/d/1yHSKg7waygaev_fgneCotIVIrh3Y5H0b/view" target="_blank" class="btn" style="color: #ffffff;border:2px solid #d48b8b;background-color: #fb0000;">Emergency SOS</a>
+            </div>
+          </div>
+        </nav>
+        <h1>Find Nearest Police Station</h1>
+          <p>Ensure your safety by locating the nearest police station.</p>
+          <button class="btn" onclick="startTracking()">Find My Location</button>
+    </header>
+  </header>
+
+  <section id="map-container">
+    <div id="map"></div>
+  </section>
+
+  <!-- Info Cards Section -->
+  <!-- Info Cards Section -->
+<section id="info" class="hidden">
+    <div class="card">
+      <img src="police.png" width="50px" height="50px" alt="Police Logo" class="card-logo" />
+      <h2>Nearest Police Station</h2>
+      <p id="police">Loading...</p>
+      <button id="navigate-btn" class="btn hidden" style="margin: auto;height: 50px;width: 100%;" onclick="navigate()">
+        Navigate to Police Station
+      </button>
+    </div>
+    <div class="card">
+      <img src="hospital.png" width="55px" height="50px" alt="Hospital Logo" class="card-logo" />
+      <h2>Nearest Hospital</h2>
+      <p id="hospital" class="hospital">Loading...</p>
+      <button id="navigate-btn2" class="btn hidden" style="margin: auto;height: 50px;width: 100%;" onclick="navigateToHospital()">
+        Navigate to Hospital
+      </button>
+    </div>
+  </section>
+  
+
+  <a href="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/27/14/20250127140138-4ECR7WEA.json" target="_blank" class="circle-button"></a>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq9FB4ubXk3VBPNVAtowT7Viek43sBgQE&libraries=places"></script>
+  <script src="script.js"></script>
+</body>
+</html>

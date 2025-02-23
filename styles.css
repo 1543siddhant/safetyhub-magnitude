@@ -1,0 +1,340 @@
+/* General body and html settings */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Black', sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+  /* Dark purple to black gradient background */
+  background: linear-gradient(to bottom, #3e065f, #000);
+  color: #fff;
+}
+
+/* Header styling */
+header {
+  height: 100vh;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.97);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding-left: 100px;
+  padding-right: 100px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 80px;
+}
+
+.nav-logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 100px;
+  text-decoration: none;
+}
+
+.mobile-icon {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  background-color: transparent;
+  color: #551A8B;
+}
+
+.button-container {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1.8px solid #fff;
+  border-radius: 10px;
+  padding: 8px 20px;
+  margin-right: 100px;
+  text-decoration: none;
+  transition: background-color 0.5s, color 0.5s;
+  transition: 300ms;
+  /* margin: auto; */
+}
+
+.btn:hover {
+  font-size: 1.2rem;
+  font-style: bold;
+  background-color: #caa2f0;
+  color: rgb(0, 0, 0);
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Emergency Button Styling */
+.emergency-btn {
+  background: #d91d2a;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin-right: 20px;
+}
+.emergency-btn a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+.emergency-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  background: #d91d2a;
+}
+
+/* Main header text styling */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* Paragraph text styling */
+p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* Button styling */
+.btn {
+  background: linear-gradient(45deg, #a82819, #700c0c);
+  border: none;
+  padding: 12px 24px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.btn:hover {
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(45deg, #700c0c, #a82819);
+}
+
+/* Map container styling */
+/* Updated Map container styling */
+#map-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  height: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #8e44ad;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  background: #000; /* fallback background */
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Info Cards Container */
+#info {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Updated Card Styling for Police and Hospital Info */
+.card {
+  background: rgba(30, 30, 30, 0.9);
+  border: 1px solid #5a1a8c;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  min-height: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+  text-transform: uppercase;
+}
+.card p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+/* Logo image inside cards */
+.card-logo {
+  width: 80px;
+  height: auto;
+  margin: 0 auto 10px;
+}
+
+/* Remove decoration from police and hospital text */
+#police,
+.hospital {
+  text-shadow: none;
+  text-decoration: none;
+  color: #ccc;
+}
+
+/* Hidden class for optional elements */
+.hidden {
+  display: none;
+}
+
+/* Circle Button Styling */
+.circle-button {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #715889;
+  background: linear-gradient(144deg, #551A8B, #551A8B 50%, #340223);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.circle-button:hover {
+  background: linear-gradient(144deg, #943ce6, #832ad6 50%, #8a085f);
+  border: 2px solid #121212;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1) rotate(3deg);
+}
+
+.circle-button::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url('chatbot.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+}
+.logo {
+  display: none;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1001;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(140, 127, 127, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    margin-top: -100px;
+  }
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+  nav ul li {
+    padding: 20px 0;
+    list-style: none;
+  }
+  nav.show {
+    display: flex;
+  }
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 1001;
+  }
+  .carousel-background img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
